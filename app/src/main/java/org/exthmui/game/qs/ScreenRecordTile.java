@@ -107,7 +107,7 @@ public class ScreenRecordTile extends TileBase implements View.OnLongClickListen
                 mPreferences = PreferenceManager.getDefaultSharedPreferences(mContext);
                 boolean showTap = mPreferences.getBoolean(Constants.LocalConfigKeys.SCREEN_RECORDING_SHOW_TAP, Constants.LocalConfigDefaultValues.SCREEN_RECORDING_SHOW_TAP);
                 int audioSource = mPreferences.getInt(Constants.LocalConfigKeys.SCREEN_RECORDING_AUDIO_SOURCE, Constants.LocalConfigDefaultValues.SCREEN_RECORDING_AUDIO_SOURCE);
-                mBinder.startRecording(audioSource, showTap);
+                mBinder.startRecording(audioSource, showTap, false, false);
             }
         } catch (RemoteException e) {
             e.printStackTrace();
